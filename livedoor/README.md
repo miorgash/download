@@ -1,5 +1,3 @@
-可搬な
-
 - インターネット接続可能な環境でビルド（初期化し，かつ可搬な状態にする）
 
     `docker build -t $user_name/$image_name:latest .`
@@ -11,7 +9,7 @@
     docker run --rm -v livedoor:/data/livedoor/ miorgash/livedoor:latest
     ```
 
-- 同環境からのデータ利用；任意のコンテナ起動時にマウント
+- 同環境からのデータ利用；任意のコンテナ起動時にマウントし利用する
 
     ```
     docker run -v livedoor:/data/livedoor/ -[your_options] $your_container $your_command
