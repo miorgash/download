@@ -7,10 +7,13 @@
     ```
     docker volume create livedoor
     docker run --rm -v livedoor:/data/livedoor/ miorgash/livedoor:latest
+    docker volume create sudachipy
+    docker run --rm -v sudachipy:/usr/local/lib/python3.7/dist-packages/sudachipy/resources miorgash/sudachipy:latest
     ```
 
 - 同環境からのデータ利用；任意のコンテナ起動時にマウントし利用する
 
     ```
+    # 例 livedoor の場合
     docker run -v livedoor:/data/livedoor/ -[your_options] $your_container $your_command
     ```
