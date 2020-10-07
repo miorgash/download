@@ -1,6 +1,10 @@
+build でイメージ化, run で永続化
+
 - インターネット接続可能な環境でビルド（初期化し，かつ可搬な状態にする）
 
     `docker build -t $user_name/$image_name:latest .`
+
+  - この時，自作のデータはローカルから `ADD` する
 
 - 任意の環境での永続化；任意の場所で，build または pull した image のデータディレクトリをマウントして VOLUME 作成
 
