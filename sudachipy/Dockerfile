@@ -11,4 +11,4 @@ RUN : "for tokenize and dependency analysis" && \
         sudachidict_core==20200722 \ 
         sudachidict_small==20200722 \
         sudachidict_full==20200722
-# /usr/local/lib/python3.7/dist-packages/sudachipy/resources/ created
+CMD ["echo", "/usr/local/lib/python3.7/dist-packages/sudachipy/resources/"]
