@@ -8,8 +8,8 @@ build でイメージ化, run で永続化
 - 任意の環境での永続化；任意の場所で，build または pull した image のデータディレクトリをマウントして VOLUME 作成
 
     ```
-    MOUNTPOINT=$(docker run --rm miorgash/${YOUR_CONTAINER_NAME}:latest)
-    docker run --rm -v ${YOUR_VOLUME}:${MOUNTPOINT} miorgash/${YOUR_CONTAINER_NAME}:latest
+    MOUNTPOINT=$(docker run --rm ${YOUR_CONTAINER})
+    docker run --rm -v ${YOUR_VOLUME}:${MOUNTPOINT} ${YOUR_CONTAINER}
     # bak
     docker volume create livedoor
     docker run --rm -v livedoor:/data/livedoor/ miorgash/livedoor:latest
