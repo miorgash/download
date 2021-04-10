@@ -8,7 +8,7 @@ RUN : "essential tools" && \
 RUN : "for tokenize and dependency analysis" && \
     pip install \
         sudachipy==0.4.9 \
-        sudachidict_core==20200722 \ 
-        sudachidict_small==20200722 \
-        sudachidict_full==20200722
+        sudachidict_core==20201223 \ 
+        sudachidict_small==20201223 \
+        sudachidict_full==20201223
 CMD ["echo", "/usr/local/lib/python3.7/dist-packages/sudachipy/resources/"]
