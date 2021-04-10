@@ -7,6 +7,6 @@ RUN : "essential tools" && \
     python3.7 -m pip install -U pip
 RUN mkdir -p /data/chive
 WORKDIR /data/chive
-RUN wget https://object-storage.tyo2.conoha.io/v1/nc_2520839e1f9641b08211a5c85243124a/chive/chive-1.1-mc5-20200318.tar.gz
-RUN tar zxvf chive-1.1-mc5-20200318.tar.gz
+RUN wget https://sudachi.s3-ap-northeast-1.amazonaws.com/chive/chive-1.2-mc5.tar.gz
+RUN tar zxvf chive-1.2-mc5.tar.gz
 CMD ["echo", "/data/chive/"]
