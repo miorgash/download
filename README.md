@@ -8,18 +8,13 @@ build でイメージ化, run で永続化
 - 任意の環境での永続化；任意の場所で，build または pull した image のデータディレクトリをマウントして VOLUME 作成
 
     ```
-    MOUNTPOINT=$(docker run --rm ${YOUR_CONTAINER})
-    docker run --rm -v ${YOUR_VOLUME}:${MOUNTPOINT} ${YOUR_CONTAINER}
-    # bak
-    docker volume create livedoor
-    docker run --rm -v livedoor:/data/livedoor/ miorgash/livedoor:latest
-    docker volume create sudachipy
-    docker run --rm -v sudachipy:/usr/local/lib/python3.7/dist-packages/sudachipy/resources miorgash/sudachipy:latest
+    MOUNTPOINT=$(docker run --rm イメージ名)
+    docker run --rm -v 任意のボリューム名:${MOUNTPOINT} イメージ名
     ```
 
 - 同環境からのデータ利用；任意のコンテナ起動時にマウントし利用する
 
     ```
     # 例 livedoor の場合
-    docker run -v livedoor:/data/livedoor/ -[your_options] $your_container $your_command
+    docker run -v livedoor:/data/livedoor/ -[your_options] マウントしたいコンテナ名 $your_command
     ```
