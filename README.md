@@ -18,5 +18,5 @@ build でイメージ化, run で永続化
 
     ```
     # 例 livedoor の場合
-    docker run -v livedoor:/data/livedoor/ -[your_options] マウントしたいコンテナ名 $your_command
+    docker run -v livedoor:/data/livedoor/ -[your_options] マウント先コンテナのイメージ 任意のコマンド
     ```
