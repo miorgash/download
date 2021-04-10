@@ -9,4 +9,5 @@ RUN mkdir -p /data/livedoor
 WORKDIR /data/livedoor
 RUN wget https://www.rondhuit.com/download/ldcc-20140209.tar.gz
 RUN tar zxvf ldcc-20140209.tar.gz
+CMD ["echo", "/data/livedoor/"]
 # /data/livedoor/text/ created
