@@ -8,5 +8,5 @@ RUN : "essential tools" && \
 RUN mkdir -p /data/chive
 WORKDIR /data/chive
 RUN wget https://sudachi.s3-ap-northeast-1.amazonaws.com/chive/chive-1.2-mc90_gensim.tar.gz
-# RUN tar zxvf chive-1.2-mc90_gensim.tar.gz
-CMD ["echo", "/data/chive/v1.2mc90/"]
+RUN tar zxvf chive-1.2-mc90_gensim.tar.gz
+CMD ["echo", "/data/chive/"]
