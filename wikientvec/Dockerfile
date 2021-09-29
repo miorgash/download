@@ -7,6 +7,6 @@ RUN : "essential tools" && \
     python3.7 -m pip install -U pip
 RUN mkdir -p /data/wikientvec
 WORKDIR /data/wikientvec
-RUN wget https://github.com/singletongue/WikiEntVec/releases/download/20190520/jawiki.word_vectors.300d.txt.bz2
-RUN bzip2 -d jawiki.word_vectors.300d.txt.bz2
+RUN wget https://github.com/singletongue/WikiEntVec/releases/download/20190520/jawiki.all_vectors.300d.txt.bz2
+RUN bzip2 -d jawiki.all_vectors.300d.txt.bz2
 CMD ["echo", "/data/wikientvec/"]
